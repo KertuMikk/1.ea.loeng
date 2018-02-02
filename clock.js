@@ -14,7 +14,7 @@ function init(){
 }
  
  function startClock (){
- 	 conseole.log(clockContainer)
+ 	
 	 window.setInterval(function() {
 	 const date = new Date()
 	 clockContainer.innerHTML = date
