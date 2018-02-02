@@ -1,2 +1,2 @@
 # 1.ea.loeng
-loengu
+loengu katsetus
