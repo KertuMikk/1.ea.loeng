@@ -17,23 +17,31 @@ function init () {
   //document.querySelector('#size-up').onclick
   document.querySelector('#size-down').addEventListener('click',sizeDown) //2 erinevat versiooni kuidas kuulata
   document.querySelector('#size-up').addEventListener('click',sizeUp)
+  window.addEventListener('keypress', hideClock)
+  window.addEventListener('keypress', showClock)
 }
 function sizeUp(){
 	console.log('+')
 	clockContainer.style.fontSize='25px'
-	window.addEventListener('keypress', hideClock)
+	
 	
 }
 function sizeDown(){
 	clockContainer.style.fontSize='5px'
 	console.log('-')
-	window.addEventListener('keypress', hideClock)
+
 }
 function hideClock(event){
 	console.log(event)
 	if(event.key =='h')
-	clockContainer.style.display = 'none'
-	//clockContainer.style.visibility = 'hidden'
+  clockContainer.style.display = 'none'
+  
+}
+function showClock(event){
+	console.log(event)
+	if(event.key =='s')
+  clockContainer.style.display = 'all'
+  
 }
 function startClock () {
   updateClock()
